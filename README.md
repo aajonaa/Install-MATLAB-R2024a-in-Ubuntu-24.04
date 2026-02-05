@@ -68,6 +68,31 @@ sudo rmdir /mnt/matlab
 
 ---
 
+## Adding More Toolboxes (Add-ons)
+
+If you need to install additional toolboxes after the initial installation:
+
+1.  **Edit `installer_input.txt`**: 
+    - Ensure `licensePath` is set correctly to your local `license.lic`.
+    - Find the line for the desired toolbox (e.g., `#product.Deep_Learning_Toolbox`) and remove the `#` to uncomment it.
+2.  **Mount the ISO**:
+    ```bash
+    sudo mkdir -p /mnt/matlab
+    sudo mount -o loop <ISO_PATH> /mnt/matlab
+    ```
+3.  **Run the Installer**:
+    ```bash
+    cd /mnt/matlab
+    sudo -E ./install -inputFile <REPO_PATH>/installer_input.txt
+    ```
+    The installer will detect the existing installation and add the new components.
+4.  **Unmount**:
+    ```bash
+    sudo umount /mnt/matlab
+    ```
+
+---
+
 ## Verification Command
 Run the following to confirm a successful headless installation:
 ```bash

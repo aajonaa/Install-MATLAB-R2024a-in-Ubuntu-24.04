@@ -108,7 +108,7 @@ improveMATLAB=yes
 ## Set the desired value for licensePath and
 ## uncomment the line.
 
-licensePath=/home/gan/下载/Crack/license.lic
+licensePath=./license.lic
 
 ########## End: Options for Network License Types #########
 
@@ -227,7 +227,7 @@ desktopShortcut=true
 #product.Instrument_Control_Toolbox
 #product.LTE_Toolbox
 #product.Lidar_Toolbox
-#product.MATLAB
+product.MATLAB
 #product.MATLAB_Coder
 #product.MATLAB_Compiler
 #product.MATLAB_Compiler_SDK
